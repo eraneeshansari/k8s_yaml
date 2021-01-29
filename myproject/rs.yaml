@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+     name: myrc
+spec:
+   replicas: 3
+   selector:
+     matchExpressions:
+      - key: app
+        operator: In
+        values: [myapp]
+      - key: env
+        operator: NotIn
+        values: [dev]
+   template:
+       metadata:
+           labels:
+             app: myapp
+       spec:
+         containers:
+         - name: test123
+           image: nginx:latest
+           ports:
+           - containerPort: 80

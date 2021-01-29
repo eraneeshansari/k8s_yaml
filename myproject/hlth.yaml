@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: mypod
+    labels:
+       app: myapp
+spec: 
+   containers:
+   - name: con1
+     image: nginx:latest
+     ports:
+     - containerPort: 80
+     livenessProbe:
+        exec:
+          command:
+          - cat
+          - /usr/share/nginx/html/index123.html
+        initialDelaySeconds: 15
+        periodSeconds: 5
+     readinessProbe:
+        exec:
+          command:
+          - cat
+          - /usr/share/nginx/html/index123.html
+        initialDelaySeconds: 15
+        periodSeconds: 5
+

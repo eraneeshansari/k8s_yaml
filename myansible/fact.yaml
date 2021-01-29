@@ -1,0 +1,8 @@
+---
+- hosts: mydc
+  become: yes
+  tasks:
+   - debug:
+       msg: "Host name,FQDN  of remode machine {{ansible_fqdn}}"
+   - debug: 
+       msg: "System Memory {{ansible_memory_mb.real}}"

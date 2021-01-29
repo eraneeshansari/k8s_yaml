@@ -1,0 +1,16 @@
+---
+- hosts: mydc
+  become: yes
+  remote_user: devops
+  tasks:
+    - name: install apache on Ubuntu  servers
+      apt:
+        name: apache2
+        state: present
+      notify:
+           Start apache
+  handlers:
+   - name: Start apache
+     service:
+       name: apache2
+       state: started

@@ -1,0 +1,38 @@
+---
+# tasks file for testproject
+- name: install packages on Ubuntu  servers
+  apt:
+    name: "{{ item }} "
+    state: present
+  when:  ansible_os_family == "Debian"
+  loop:
+      - apache2
+      - unzip
+      - ntp
+      - wget
+- name: install packages on Centos servers
+  yum:
+    name: "{{ item }}"
+    state: installed
+  when:  ansible_os_family == "RedHat"
+  loop:
+    - httpd
+    - unzip
+- name: Start Apache
+  service:
+      name: apache2
+      state: started
+      enabled: yes
+- name: Configure website in remote server
+  unarchive:
+     src: "{{ webfile }}"
+     dest: "{{ destination}}"
+- name: Deploy NTP configuration using jinja2"
+  template:
+     src: ntp.j2
+     dest: /etc/ntp.conf
+- name: "copy new.txt"
+  ansible.builtin.template:
+    src: new.txt
+    dest: /tmp/
+  

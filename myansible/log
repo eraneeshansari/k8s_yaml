@@ -1,0 +1,203 @@
+2021-01-29 06:37:24,579 p=23396 u=root n=ansible | PLAY [mydc] ********************************************************************************************************************************************************
+2021-01-29 06:37:24,594 p=23396 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2021-01-29 06:37:26,709 p=23396 u=root n=ansible | ok: [node3]
+2021-01-29 06:37:27,728 p=23396 u=root n=ansible | ok: [node2]
+2021-01-29 06:37:27,745 p=23396 u=root n=ansible | TASK [testproject : install packages on Ubuntu  servers] ***********************************************************************************************************
+2021-01-29 06:37:29,385 p=23396 u=root n=ansible | ok: [node3] => (item=apache2)
+2021-01-29 06:37:29,389 p=23396 u=root n=ansible | ok: [node2] => (item=apache2)
+2021-01-29 06:37:30,653 p=23396 u=root n=ansible | ok: [node3] => (item=unzip)
+2021-01-29 06:37:30,676 p=23396 u=root n=ansible | ok: [node2] => (item=unzip)
+2021-01-29 06:37:31,940 p=23396 u=root n=ansible | ok: [node3] => (item=ntp)
+2021-01-29 06:37:31,961 p=23396 u=root n=ansible | ok: [node2] => (item=ntp)
+2021-01-29 06:37:33,219 p=23396 u=root n=ansible | ok: [node3] => (item=wget)
+2021-01-29 06:37:33,237 p=23396 u=root n=ansible | ok: [node2] => (item=wget)
+2021-01-29 06:37:33,261 p=23396 u=root n=ansible | TASK [testproject : install packages on Centos servers] ************************************************************************************************************
+2021-01-29 06:37:33,309 p=23396 u=root n=ansible | skipping: [node2] => (item=httpd) 
+2021-01-29 06:37:33,310 p=23396 u=root n=ansible | skipping: [node2] => (item=unzip) 
+2021-01-29 06:37:33,335 p=23396 u=root n=ansible | skipping: [node3] => (item=httpd) 
+2021-01-29 06:37:33,345 p=23396 u=root n=ansible | skipping: [node3] => (item=unzip) 
+2021-01-29 06:37:33,367 p=23396 u=root n=ansible | TASK [testproject : Start Apache] **********************************************************************************************************************************
+2021-01-29 06:37:34,388 p=23396 u=root n=ansible | ok: [node3]
+2021-01-29 06:37:34,408 p=23396 u=root n=ansible | ok: [node2]
+2021-01-29 06:37:34,424 p=23396 u=root n=ansible | TASK [testproject : Configure website in remote server] ************************************************************************************************************
+2021-01-29 06:37:36,078 p=23396 u=root n=ansible | ok: [node3]
+2021-01-29 06:37:36,088 p=23396 u=root n=ansible | ok: [node2]
+2021-01-29 06:37:36,105 p=23396 u=root n=ansible | TASK [testproject : Deploy NTP configuration using jinja2"] ********************************************************************************************************
+2021-01-29 06:37:36,971 p=23396 u=root n=ansible | ok: [node2]
+2021-01-29 06:37:36,985 p=23396 u=root n=ansible | ok: [node3]
+2021-01-29 06:37:36,990 p=23396 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2021-01-29 06:37:36,990 p=23396 u=root n=ansible | node2                      : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:37:36,990 p=23396 u=root n=ansible | node3                      : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:39:19,359 p=24338 u=root n=ansible | PLAY [mydc] ********************************************************************************************************************************************************
+2021-01-29 06:39:19,376 p=24338 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2021-01-29 06:39:21,471 p=24338 u=root n=ansible | ok: [node3]
+2021-01-29 06:39:21,477 p=24338 u=root n=ansible | ok: [node2]
+2021-01-29 06:39:21,494 p=24338 u=root n=ansible | TASK [testproject : install packages on Ubuntu  servers] ***********************************************************************************************************
+2021-01-29 06:39:23,078 p=24338 u=root n=ansible | ok: [node2] => (item=apache2)
+2021-01-29 06:39:23,091 p=24338 u=root n=ansible | ok: [node3] => (item=apache2)
+2021-01-29 06:39:24,359 p=24338 u=root n=ansible | ok: [node2] => (item=unzip)
+2021-01-29 06:39:24,380 p=24338 u=root n=ansible | ok: [node3] => (item=unzip)
+2021-01-29 06:39:25,644 p=24338 u=root n=ansible | ok: [node2] => (item=ntp)
+2021-01-29 06:39:25,754 p=24338 u=root n=ansible | ok: [node3] => (item=ntp)
+2021-01-29 06:39:26,892 p=24338 u=root n=ansible | ok: [node2] => (item=wget)
+2021-01-29 06:39:27,011 p=24338 u=root n=ansible | ok: [node3] => (item=wget)
+2021-01-29 06:39:27,032 p=24338 u=root n=ansible | TASK [testproject : install packages on Centos servers] ************************************************************************************************************
+2021-01-29 06:39:27,074 p=24338 u=root n=ansible | skipping: [node2] => (item=httpd) 
+2021-01-29 06:39:27,075 p=24338 u=root n=ansible | skipping: [node2] => (item=unzip) 
+2021-01-29 06:39:27,097 p=24338 u=root n=ansible | skipping: [node3] => (item=httpd) 
+2021-01-29 06:39:27,104 p=24338 u=root n=ansible | skipping: [node3] => (item=unzip) 
+2021-01-29 06:39:27,124 p=24338 u=root n=ansible | TASK [testproject : Start Apache] **********************************************************************************************************************************
+2021-01-29 06:39:28,170 p=24338 u=root n=ansible | ok: [node2]
+2021-01-29 06:39:28,187 p=24338 u=root n=ansible | ok: [node3]
+2021-01-29 06:39:28,208 p=24338 u=root n=ansible | TASK [testproject : Configure website in remote server] ************************************************************************************************************
+2021-01-29 06:39:29,830 p=24338 u=root n=ansible | ok: [node2]
+2021-01-29 06:39:29,851 p=24338 u=root n=ansible | ok: [node3]
+2021-01-29 06:39:29,869 p=24338 u=root n=ansible | TASK [testproject : Deploy NTP configuration using jinja2"] ********************************************************************************************************
+2021-01-29 06:39:30,746 p=24338 u=root n=ansible | ok: [node2]
+2021-01-29 06:39:30,751 p=24338 u=root n=ansible | ok: [node3]
+2021-01-29 06:39:30,754 p=24338 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2021-01-29 06:39:30,754 p=24338 u=root n=ansible | node2                      : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:39:30,755 p=24338 u=root n=ansible | node3                      : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:45:53,510 p=27665 u=root n=ansible | PLAY [mydc] *****************************************************************************************************************************
+2021-01-29 06:45:53,531 p=27665 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************************************************
+2021-01-29 06:45:55,669 p=27665 u=root n=ansible | ok: [node3]
+2021-01-29 06:45:56,630 p=27665 u=root n=ansible | ok: [node2]
+2021-01-29 06:45:56,649 p=27665 u=root n=ansible | TASK [testproject : install packages on Ubuntu  servers] ********************************************************************************
+2021-01-29 06:45:58,303 p=27665 u=root n=ansible | ok: [node3] => (item=apache2)
+2021-01-29 06:45:58,372 p=27665 u=root n=ansible | ok: [node2] => (item=apache2)
+2021-01-29 06:45:59,621 p=27665 u=root n=ansible | ok: [node3] => (item=unzip)
+2021-01-29 06:45:59,668 p=27665 u=root n=ansible | ok: [node2] => (item=unzip)
+2021-01-29 06:46:00,881 p=27665 u=root n=ansible | ok: [node3] => (item=ntp)
+2021-01-29 06:46:00,942 p=27665 u=root n=ansible | ok: [node2] => (item=ntp)
+2021-01-29 06:46:02,164 p=27665 u=root n=ansible | ok: [node3] => (item=wget)
+2021-01-29 06:46:02,244 p=27665 u=root n=ansible | ok: [node2] => (item=wget)
+2021-01-29 06:46:02,268 p=27665 u=root n=ansible | TASK [testproject : install packages on Centos servers] *********************************************************************************
+2021-01-29 06:46:02,312 p=27665 u=root n=ansible | skipping: [node2] => (item=httpd) 
+2021-01-29 06:46:02,319 p=27665 u=root n=ansible | skipping: [node2] => (item=unzip) 
+2021-01-29 06:46:02,344 p=27665 u=root n=ansible | skipping: [node3] => (item=httpd) 
+2021-01-29 06:46:02,354 p=27665 u=root n=ansible | skipping: [node3] => (item=unzip) 
+2021-01-29 06:46:02,372 p=27665 u=root n=ansible | TASK [testproject : Start Apache] *******************************************************************************************************
+2021-01-29 06:46:03,539 p=27665 u=root n=ansible | ok: [node3]
+2021-01-29 06:46:03,594 p=27665 u=root n=ansible | ok: [node2]
+2021-01-29 06:46:03,612 p=27665 u=root n=ansible | TASK [testproject : Configure website in remote server] *********************************************************************************
+2021-01-29 06:46:05,227 p=27665 u=root n=ansible | ok: [node3]
+2021-01-29 06:46:05,244 p=27665 u=root n=ansible | ok: [node2]
+2021-01-29 06:46:05,268 p=27665 u=root n=ansible | TASK [testproject : Deploy NTP configuration using jinja2"] *****************************************************************************
+2021-01-29 06:46:06,241 p=27665 u=root n=ansible | ok: [node2]
+2021-01-29 06:46:06,258 p=27665 u=root n=ansible | ok: [node3]
+2021-01-29 06:46:06,276 p=27665 u=root n=ansible | TASK [testproject : copy new.txt] *******************************************************************************************************
+2021-01-29 06:46:06,967 p=27665 u=root n=ansible | ok: [node3]
+2021-01-29 06:46:07,186 p=27665 u=root n=ansible | changed: [node2]
+2021-01-29 06:46:07,195 p=27665 u=root n=ansible | PLAY RECAP ******************************************************************************************************************************
+2021-01-29 06:46:07,195 p=27665 u=root n=ansible | node2                      : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:46:07,196 p=27665 u=root n=ansible | node3                      : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:46:23,351 p=28062 u=root n=ansible | PLAY [mydc] ********************************************************************************************************************************************************
+2021-01-29 06:46:23,370 p=28062 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2021-01-29 06:46:24,874 p=28062 u=root n=ansible | ok: [node2]
+2021-01-29 06:46:24,889 p=28062 u=root n=ansible | ok: [node3]
+2021-01-29 06:46:24,907 p=28062 u=root n=ansible | TASK [testproject : install packages on Ubuntu  servers] ***********************************************************************************************************
+2021-01-29 06:46:26,577 p=28062 u=root n=ansible | ok: [node2] => (item=apache2)
+2021-01-29 06:46:26,585 p=28062 u=root n=ansible | ok: [node3] => (item=apache2)
+2021-01-29 06:46:27,955 p=28062 u=root n=ansible | ok: [node2] => (item=unzip)
+2021-01-29 06:46:27,976 p=28062 u=root n=ansible | ok: [node3] => (item=unzip)
+2021-01-29 06:46:29,242 p=28062 u=root n=ansible | ok: [node2] => (item=ntp)
+2021-01-29 06:46:29,246 p=28062 u=root n=ansible | ok: [node3] => (item=ntp)
+2021-01-29 06:46:30,509 p=28062 u=root n=ansible | ok: [node3] => (item=wget)
+2021-01-29 06:46:30,520 p=28062 u=root n=ansible | ok: [node2] => (item=wget)
+2021-01-29 06:46:30,544 p=28062 u=root n=ansible | TASK [testproject : install packages on Centos servers] ************************************************************************************************************
+2021-01-29 06:46:30,601 p=28062 u=root n=ansible | skipping: [node2] => (item=httpd) 
+2021-01-29 06:46:30,603 p=28062 u=root n=ansible | skipping: [node2] => (item=unzip) 
+2021-01-29 06:46:30,616 p=28062 u=root n=ansible | skipping: [node3] => (item=httpd) 
+2021-01-29 06:46:30,631 p=28062 u=root n=ansible | skipping: [node3] => (item=unzip) 
+2021-01-29 06:46:30,652 p=28062 u=root n=ansible | TASK [testproject : Start Apache] **********************************************************************************************************************************
+2021-01-29 06:46:31,663 p=28062 u=root n=ansible | ok: [node2]
+2021-01-29 06:46:31,672 p=28062 u=root n=ansible | ok: [node3]
+2021-01-29 06:46:31,691 p=28062 u=root n=ansible | TASK [testproject : Configure website in remote server] ************************************************************************************************************
+2021-01-29 06:46:33,349 p=28062 u=root n=ansible | ok: [node3]
+2021-01-29 06:46:33,366 p=28062 u=root n=ansible | ok: [node2]
+2021-01-29 06:46:33,384 p=28062 u=root n=ansible | TASK [testproject : Deploy NTP configuration using jinja2"] ********************************************************************************************************
+2021-01-29 06:46:34,283 p=28062 u=root n=ansible | ok: [node3]
+2021-01-29 06:46:34,298 p=28062 u=root n=ansible | ok: [node2]
+2021-01-29 06:46:34,316 p=28062 u=root n=ansible | TASK [testproject : copy new.txt] **********************************************************************************************************************************
+2021-01-29 06:46:34,916 p=28062 u=root n=ansible | ok: [node2]
+2021-01-29 06:46:34,972 p=28062 u=root n=ansible | ok: [node3]
+2021-01-29 06:46:34,975 p=28062 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2021-01-29 06:46:34,975 p=28062 u=root n=ansible | node2                      : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:46:34,976 p=28062 u=root n=ansible | node3                      : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:48:17,311 p=29014 u=root n=ansible | PLAY [mydc] ********************************************************************************************************************************************************
+2021-01-29 06:48:17,341 p=29014 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2021-01-29 06:48:19,365 p=29014 u=root n=ansible | ok: [node3]
+2021-01-29 06:48:19,479 p=29014 u=root n=ansible | ok: [node2]
+2021-01-29 06:48:19,495 p=29014 u=root n=ansible | TASK [testproject : install packages on Ubuntu  servers] ***********************************************************************************************************
+2021-01-29 06:48:21,081 p=29014 u=root n=ansible | ok: [node3] => (item=apache2)
+2021-01-29 06:48:21,096 p=29014 u=root n=ansible | ok: [node2] => (item=apache2)
+2021-01-29 06:48:22,332 p=29014 u=root n=ansible | ok: [node3] => (item=unzip)
+2021-01-29 06:48:22,363 p=29014 u=root n=ansible | ok: [node2] => (item=unzip)
+2021-01-29 06:48:23,647 p=29014 u=root n=ansible | ok: [node3] => (item=ntp)
+2021-01-29 06:48:23,659 p=29014 u=root n=ansible | ok: [node2] => (item=ntp)
+2021-01-29 06:48:24,948 p=29014 u=root n=ansible | ok: [node2] => (item=wget)
+2021-01-29 06:48:24,966 p=29014 u=root n=ansible | ok: [node3] => (item=wget)
+2021-01-29 06:48:24,984 p=29014 u=root n=ansible | TASK [testproject : install packages on Centos servers] ************************************************************************************************************
+2021-01-29 06:48:25,028 p=29014 u=root n=ansible | skipping: [node2] => (item=httpd) 
+2021-01-29 06:48:25,030 p=29014 u=root n=ansible | skipping: [node2] => (item=unzip) 
+2021-01-29 06:48:25,052 p=29014 u=root n=ansible | skipping: [node3] => (item=httpd) 
+2021-01-29 06:48:25,059 p=29014 u=root n=ansible | skipping: [node3] => (item=unzip) 
+2021-01-29 06:48:25,077 p=29014 u=root n=ansible | TASK [testproject : Start Apache] **********************************************************************************************************************************
+2021-01-29 06:48:26,072 p=29014 u=root n=ansible | ok: [node2]
+2021-01-29 06:48:26,080 p=29014 u=root n=ansible | ok: [node3]
+2021-01-29 06:48:26,097 p=29014 u=root n=ansible | TASK [testproject : Configure website in remote server] ************************************************************************************************************
+2021-01-29 06:48:27,785 p=29014 u=root n=ansible | ok: [node2]
+2021-01-29 06:48:27,792 p=29014 u=root n=ansible | ok: [node3]
+2021-01-29 06:48:27,811 p=29014 u=root n=ansible | TASK [testproject : Deploy NTP configuration using jinja2"] ********************************************************************************************************
+2021-01-29 06:48:28,691 p=29014 u=root n=ansible | ok: [node3]
+2021-01-29 06:48:28,707 p=29014 u=root n=ansible | ok: [node2]
+2021-01-29 06:48:28,724 p=29014 u=root n=ansible | TASK [testproject : copy new.txt] **********************************************************************************************************************************
+2021-01-29 06:48:29,336 p=29014 u=root n=ansible | ok: [node2]
+2021-01-29 06:48:29,376 p=29014 u=root n=ansible | ok: [node3]
+2021-01-29 06:48:29,378 p=29014 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2021-01-29 06:48:29,378 p=29014 u=root n=ansible | node2                      : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:48:29,379 p=29014 u=root n=ansible | node3                      : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-01-29 06:48:46,467 p=29423 u=root n=ansible | ERROR! the playbook: installapache_jinja2.yaml--check could not be found
+2021-01-29 06:48:55,528 p=29471 u=root n=ansible | PLAY [mydc] ********************************************************************************************************************************************************
+2021-01-29 06:48:55,543 p=29471 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2021-01-29 06:48:56,987 p=29471 u=root n=ansible | ok: [node3]
+2021-01-29 06:48:57,111 p=29471 u=root n=ansible | ok: [node2]
+2021-01-29 06:48:57,128 p=29471 u=root n=ansible | TASK [testproject : install packages on Ubuntu  servers] ***********************************************************************************************************
+2021-01-29 06:48:58,695 p=29471 u=root n=ansible | ok: [node3] => (item=apache2)
+2021-01-29 06:48:58,712 p=29471 u=root n=ansible | ok: [node2] => (item=apache2)
+2021-01-29 06:48:59,995 p=29471 u=root n=ansible | ok: [node3] => (item=unzip)
+2021-01-29 06:49:00,007 p=29471 u=root n=ansible | ok: [node2] => (item=unzip)
+2021-01-29 06:49:01,332 p=29471 u=root n=ansible | ok: [node2] => (item=ntp)
+2021-01-29 06:49:01,335 p=29471 u=root n=ansible | ok: [node3] => (item=ntp)
+2021-01-29 06:49:02,597 p=29471 u=root n=ansible | ok: [node3] => (item=wget)
+2021-01-29 06:49:02,652 p=29471 u=root n=ansible | ok: [node2] => (item=wget)
+2021-01-29 06:49:02,675 p=29471 u=root n=ansible | TASK [testproject : install packages on Centos servers] ************************************************************************************************************
+2021-01-29 06:49:02,721 p=29471 u=root n=ansible | skipping: [node2] => (item=httpd) 
+2021-01-29 06:49:02,723 p=29471 u=root n=ansible | skipping: [node2] => (item=unzip) 
+2021-01-29 06:49:02,761 p=29471 u=root n=ansible | skipping: [node3] => (item=httpd) 
+2021-01-29 06:49:02,768 p=29471 u=root n=ansible | skipping: [node3] => (item=unzip) 
+2021-01-29 06:49:02,789 p=29471 u=root n=ansible | TASK [testproject : Start Apache] **********************************************************************************************************************************
+2021-01-29 06:49:03,915 p=29471 u=root n=ansible | ok: [node3]
+2021-01-29 06:49:03,924 p=29471 u=root n=ansible | ok: [node2]
+2021-01-29 06:49:03,947 p=29471 u=root n=ansible | TASK [testproject : Configure website in remote server] ************************************************************************************************************
+2021-01-29 06:49:05,502 p=29471 u=root n=ansible | skipping: [node3]
+2021-01-29 06:49:05,509 p=29471 u=root n=ansible | skipping: [node2]
+2021-01-29 06:49:05,528 p=29471 u=root n=ansible | TASK [testproject : Deploy NTP configuration using jinja2"] ********************************************************************************************************
+2021-01-29 06:49:06,443 p=29471 u=root n=ansible | ok: [node3]
+2021-01-29 06:49:06,450 p=29471 u=root n=ansible | ok: [node2]
+2021-01-29 06:49:06,469 p=29471 u=root n=ansible | TASK [testproject : copy new.txt] **********************************************************************************************************************************
+2021-01-29 06:49:07,106 p=29471 u=root n=ansible | ok: [node2]
+2021-01-29 06:49:07,162 p=29471 u=root n=ansible | ok: [node3]
+2021-01-29 06:49:07,174 p=29471 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2021-01-29 06:49:07,179 p=29471 u=root n=ansible | node2                      : ok=5    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2021-01-29 06:49:07,180 p=29471 u=root n=ansible | node3                      : ok=5    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2021-01-29 07:04:20,124 p=3599 u=root n=ansible | PLAY [mydc] ********************************************************************************************************************************************************
+2021-01-29 07:04:20,140 p=3599 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************
+2021-01-29 07:04:22,226 p=3599 u=root n=ansible | ok: [node2]
+2021-01-29 07:04:22,672 p=3599 u=root n=ansible | ok: [node3]
+2021-01-29 07:04:22,687 p=3599 u=root n=ansible | TASK [install apache on Ubuntu  servers] ***************************************************************************************************************************
+2021-01-29 07:04:24,266 p=3599 u=root n=ansible | ok: [node3]
+2021-01-29 07:04:24,273 p=3599 u=root n=ansible | ok: [node2]
+2021-01-29 07:04:24,276 p=3599 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************
+2021-01-29 07:04:24,277 p=3599 u=root n=ansible | node2                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-01-29 07:04:24,277 p=3599 u=root n=ansible | node3                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

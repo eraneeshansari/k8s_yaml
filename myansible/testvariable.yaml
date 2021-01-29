@@ -1,0 +1,19 @@
+---
+- hosts: node3
+  become: yes
+  remote_user: devops
+  tasks:
+    - debug:
+         msg: "value of variable {{ username }}"
+    - debug:
+         msg: "value of variable {{ group }}"
+    - name: "Copy new.txt to remote server"
+      copy:
+         src: new.txt
+         dest: /tmp/new.txt
+    - name: "read new.txt from host"
+      command: cat /tmp/new.txt
+      register: uptm
+    - debug:
+        msg: "system uptime is {{ uptm.stdout }}"
+ 

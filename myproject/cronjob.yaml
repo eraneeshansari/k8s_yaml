@@ -1,0 +1,17 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+   name: mycronjob
+spec:
+   schedule: "30 2 * * *" 
+   jobTemplate:
+      spec:
+        template:
+          metadata: 
+             name: myjob
+          spec:
+            containers:
+            - name: jobcon
+              image: nginx:latest
+              command: ["echo","hello test"]
+            restartPolicy: Never
